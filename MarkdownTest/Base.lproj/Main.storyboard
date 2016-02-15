@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="g72-aH-Cmz">
+                                <rect key="frame" x="20" y="28" width="560" height="272"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">*italics*
+**bold**
+***bold italic***
+~~strikethrough~~
+
+# Header 1
+## Header 2
+### Header 3
+#### Header 4
+##### Header 5
+###### Header 6
+
+Header 1
+========
+
+Header 2
+--------</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Il-Oe-Tkr">
+                                <rect key="frame" x="20" y="300" width="560" height="300"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="6Il-Oe-Tkr" secondAttribute="trailing" id="4M1-B0-6Wc"/>
+                            <constraint firstItem="6Il-Oe-Tkr" firstAttribute="top" secondItem="g72-aH-Cmz" secondAttribute="bottom" id="5ud-de-DDg"/>
+                            <constraint firstItem="g72-aH-Cmz" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="28" id="8Xp-Mi-5s8"/>
+                            <constraint firstItem="g72-aH-Cmz" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="AES-ek-cA7"/>
+                            <constraint firstItem="g72-aH-Cmz" firstAttribute="bottom" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Ege-Rr-Tsf"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="6Il-Oe-Tkr" secondAttribute="bottom" id="HvH-cg-ckV"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="g72-aH-Cmz" secondAttribute="trailing" constant="159" id="Tde-wO-CLI"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="g72-aH-Cmz" secondAttribute="trailing" id="gcm-TC-aHB"/>
+                            <constraint firstItem="6Il-Oe-Tkr" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="ne0-XY-HlB"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="Tde-wO-CLI"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="textView" destination="g72-aH-Cmz" id="8Iq-1F-Sle"/>
+                        <outlet property="webView" destination="6Il-Oe-Tkr" id="xoo-Cs-zr4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="245" y="290"/>
+        </scene>
+    </scenes>
+</document>
